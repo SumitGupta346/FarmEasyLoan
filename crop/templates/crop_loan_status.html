@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+
+<head>
+	<title>E-Farmer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<meta name="keywords"
+		content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates" />
+	<script src="{%static 'js/jquery-1.11.0.min.js' %}"></script>
+	<link href="{%static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+	<link href="{%static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+</head>
+
+<body>
+	<!--start-header-->
+	<div id="home" class="header" style="background-color:#D57E7E">
+		<div class="top-header">
+			<div class="container">
+				<div class="logo">
+					<img src="static/images/3.png"><a href="index.html"
+						style="color:#FFFFFF; font-weight:bold; font-size:24px;">Farmer E-Loan Processing </a>
+				</div>
+				<!--start-top-nav-->
+				<nav class="top-nav">
+
+				</nav>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!---pop-up-box---->
+		<script type="text/javascript" src="{%static 'js/modernizr.custom.min.js' %}"></script>
+		<link href="{%static 'css/popup-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<script src="{%static 'js/jquery.magnific-popup.js' %}" type="text/javascript"></script>
+		<!---//pop-up-box---->
+		<div id="small-dialog" class="mfp-hide">
+
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+
+			});
+		</script>
+		<!--End-header-->
+		<div class="navgation">
+			<div class="menu" style="width:100%">
+
+				<ul class="nav" id="nav">
+					{% include 'bank_menu.html' %}
+				</ul>
+				<!----start-top-nav-script---->
+				<script type="text/javascript" src="js/responsive-nav.js"></script>
+				<script type="text/javascript">
+					jQuery(document).ready(function ($) {
+						$(".scroll").click(function (event) {
+							event.preventDefault();
+							$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+						});
+					});
+				</script>
+				<!----//End-top-nav-script---->
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--starts-blog-->
+	<div class="blog" style="background-color:rgba(192,192,192,0.3);">
+		<div class="container">
+			<div class="blog-main">
+				<div class="col-md-8 blog-main-left">
+					<h3 align="center">Crop Loan Status</h3>
+					<br>
+					<form action="" method="post">
+						{% csrf_token %}
+						<table class="table" border="2" width="100%" text-align="center">
+							<tr>
+								<td>Loan ID </td>
+								<td>
+									<input name="t1" type="text" id="t1" placeholder="Enter Loan Id" required />
+								</td>
+							</tr>
+							<tr>
+								<td>Verify Status</td>
+								<td>
+									<select name="t2">
+										<option>Approved </option>
+										<option>Rejected</option>
+										<option>Pending</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Request Status</td>
+								<td>
+									<select name="t3">
+										<option>Approved </option>
+										<option>Rejected</option>
+										<option>Pending</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Appln Status</td>
+								<td>
+									<select name="t4">
+										<option>Approved </option>
+										<option>Rejected</option>
+										<option>Pending</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Reason</td>
+								<td><input type="text" name="t5" id="t5" placeholder="Enter Reason" required /></td>
+							</tr>
+							<tr>
+								<th></th>
+								<td><input type="submit" name="button" id="button" value="Submit" />
+								</td>
+							</tr>
+
+						</table>
+
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="blog-bottom">
+
+			</div>
+		</div>
+	</div>
+	<!--end-blog-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-text">
+				<p>FarmEasyLoan</p>
+			</div>
+		</div>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;">
+			</span></a>
+	</div>
+</body>
+
+</html>

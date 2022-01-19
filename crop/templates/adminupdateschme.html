@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+
+<head>
+	<title>E-Farmer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<meta name="keywords"
+		content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates" />
+	<script src="{%static 'js/jquery-1.11.0.min.js' %}"></script>
+	<link href="{%static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+	<link href="{%static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<style>
+		table {
+			width: 100%;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid #003300;
+			text-align: center;
+			padding: 15px;
+			margin: 35px;
+		}
+
+		th {
+			background: orange;
+		}
+
+		tr:hover {
+			background-color: PaleGreen;
+		}
+	</style>
+</head>
+
+<body>
+	<!--start-header-->
+	<div id="home" class="header" style="background-color:#1EAE98">
+		<div class="top-header">
+			<div class="container">
+				<div class="logo">
+					<img src="static/images/admin1.png"><a href="index.html"
+						style="color:#FFFFFF; font-weight:bold; font-size:24px;">FarmEasyLoan </a>
+				</div>
+				<!--start-top-nav-->
+				<nav class="top-nav">
+
+				</nav>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!---pop-up-box---->
+		<script type="text/javascript" src="{%static 'js/modernizr.custom.min.js' %}"></script>
+		<link href="{%static 'css/popup-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<script src="{%static 'js/jquery.magnific-popup.js' %}" type="text/javascript"></script>
+		<!---//pop-up-box---->
+
+		<script>
+			$(document).ready(function () {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+
+			});
+		</script>
+		<!--End-header-->
+		<div class="navgation">
+			<div class="menu" style="width:100%">
+
+				<ul class="nav" id="nav">
+					{% include 'admin_menu.html' %}
+				</ul>
+				<!----start-top-nav-script---->
+				<script type="text/javascript" src="js/responsive-nav.js"></script>
+				<script type="text/javascript">
+					jQuery(document).ready(function ($) {
+						$(".scroll").click(function (event) {
+							event.preventDefault();
+							$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+						});
+					});
+				</script>
+				<!----//End-top-nav-script---->
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--starts-blog-->
+	<div class="blog" style="background-color:rgba(192,192,192,0.3);">
+		<div class="container">
+			<div class="blog-main">
+				<div class="col-md-8 blog-main-left">
+
+					<h3 align="center">Update Scheme Details</h3>
+					<form action="" method="post">
+						{% csrf_token %}
+						<table>
+							<tr>
+								<th>Scheme Id </th>
+								<th>Scheme Type</th>
+								<th>Document Required</th>
+								<th>Rate of Intrest </th>
+								<th>Eligible</th>
+								<th>Description</th>
+								<th>Update</th>
+
+							</tr>
+							{% for r in userdict %}
+
+							<td>{{ r.gsid }} </td>
+							<td>{{ r.schme_type }} </td>
+							<td>{{ r.doc_reqrd }}</td>
+							<td>{{ r.loan_rate }} </td>
+							<td>{{ r.eligible }}</td>
+							<td>{{ r.description }}</td>
+							<td><a href="{% url 'editadminschemes' r.id %}">Update</a> </td>
+
+							</tr>
+							{% endfor %}
+
+						</table>
+
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="blog-bottom">
+
+			</div>
+		</div>
+	</div>
+	<!--end-blog-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-text">
+				<p>FarmEasyLoan</p>
+			</div>
+		</div>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;">
+			</span></a>
+	</div>
+</body>
+
+</html>

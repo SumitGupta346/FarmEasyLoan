@@ -1,0 +1,66 @@
+<li class="active grid"><a class="color8" href="{% url 'index' %}">HOME</a></li>
+<li><a href="{% url 'insertgovtschemes' %}">Govt Schemes</a></li>
+<li><a href="{% url 'adminupdates' %}">Update Govt Schemes</a></li>
+<!--  <li><a href="{% url 'insertaadhardetails' %}">Aadhar Details</a></li>-->
+<li class="grid"><a class="color2" href="{% url 'insertbankdetails' %}">Bank Details</a></li>
+<!--  <li><a class="color4" href="{% url 'showfarmer' %}">View Farmer</a></li>-->
+<!--  <li><a class="color4" href="{% url 'viewcroploan' %}">View Apply</a></li>-->
+<!--  <li><a class="color4" href="{% url 'viewmeetingdetails' %}">View Schedule</a></li>-->
+<!--  <li><a class="color4" href="{% url 'adminloanstatus' %}">View Loan Status</a></li>-->
+
+
+<style>
+  .dropbtn {
+    background-color: #333333;
+    color: white;
+    padding: 18px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: yellow;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+</style>
+
+
+<div class="dropdown">
+  <button class="dropbtn">Farmer Details</button>
+  <div class="dropdown-content">
+    <a href="{% url 'showfarmer' %}">View Farmer</a>
+    <a href="{% url 'viewcroploan' %}">View Apply</a>
+    <a href="{% url 'viewmeetingdetails' %}">View Schedule</a>
+    <a href="{% url 'adminloanstatus' %}">View Loan Status</a>
+  </div>
+</div>
+
+<li><a class="color4" href="{% url 'index' %}">Logout</a></li>

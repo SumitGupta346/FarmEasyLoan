@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+{%load static%}
+<html>
+<head>
+<title>E-Former Loan </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lookz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<!-- start menu -->
+<link href="{% static 'css/megamenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/megamenu.js' %}"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style2 {
+	color: #0000FF;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+<div class="wrap">	
+<div class="container">
+      <div class="header_top">
+		  <div class="col-sm-9 h_menu4">
+				<ul class="megamenu skyblue">
+	
+				    
+		<li><a href="apply_for_loan.php" class="color4">Apply For Loan</a></li>
+        
+        <li><a href="status.html" class="color4">Status of Loan</a></li>
+										
+		
+				   	
+                <li><a class="color4" href="login.html">Upload Disease Photo</a></li>	
+                
+                 <li><a class="color4" href="login.html">Govt Schemes</a></li>	
+                 
+                <li><a class="color4" href="help.php">Help</a></li>		
+                
+                 <li><a class="color4" href="contact.php">Contact</a></li>				
+				
+			  </ul> 
+			</div>
+			<div class="col-sm-3 header-top-right">
+			     <div class="drop_buttons">
+			  	   
+   			       <div class="clearfix"></div>
+   			    </div>
+   			    <div class="register-info">
+				    <ul>
+						<li><a href="login.html">Login</a></li>
+					</ul>
+			    </div>
+				<div class="clearfix"> </div>
+   			 </div>
+   			 <div class="clearfix"> </div>
+	</div>
+    <div class="header_bootm">
+		<div class="col-sm-4 span_1">
+		  <div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+		  </div>
+		</div>
+		<div class="col-sm-8 row_2">
+		  <div class="header_bottom_right">
+			<div class="search">
+			  <input type="text" value="Your email address" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your email address';}">
+			  <input type="submit" value="">
+	  		</div>
+	  		
+	  		<div class="clearfix"> </div>
+		   </div>
+		</div>
+		 <div class="clearfix"></div>
+	</div>
+<div class="content">
+  <div class="content_box">
+	<div class="men">
+	 <div class="account-in">
+							<h2>Login</h2>
+		 <h3>{{msg}}</h3>
+							<p><span class="style1">Note:</span> <span class="style2">if you are new user please create an account?</span></p>
+<div class="col-md-7 account-top">
+							  <form method="post" action="logcheck.php">
+								<div> 	
+									<span>User Name*</span>
+									<input type="text" name="T1" id="T1"> 
+								</div>
+								<div> 
+									<span class="pass">Password*</span>
+									<input type="password" name="T2" id="T2">
+								</div>				
+									<input type="submit" value="Login"> &nbsp;&nbsp;&nbsp;<a href="reg.php" style="background-color:#0033FF; color:#FFFFFF; font-weight:bold; width:200px;height:120px; text-decoration:none;">Create Account</a> 
+							   </form>
+							</div>
+							<div class="clearfix"> </div>
+					</div>
+    </div>
+	<div class="footer_top">
+	  <div class="span_of_4">
+	    <div class="clearfix"></div>
+	</div>
+  <!-- start span_of_2 -->
+		<div class="span_of_2">
+		  <div class="clearfix"></div>
+		</div>
+		<div class="copy">
+		   <p>© 2021 All Rights Reseverd </p>
+		</div>
+     </div>
+   </div>
+</div>	
+</body>
+</html>		
